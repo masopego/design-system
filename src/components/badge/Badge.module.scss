@@ -1,0 +1,41 @@
+@use "../../styles/breakpoints" as *;
+@use "../../styles/typography" as *;
+
+
+:where(.badge) {
+  --badge-padding-block: var(--space-3xs);
+  --badge-padding-inline: var(--space-2xs);
+  --badge-background: var(--color-neutral-100);
+  --badge-color: var(--color-text-primary);
+
+  @include mobile {
+    --badge-padding-block: var(--space-4xs);
+    --badge-padding-inline: var(--space-3xs);
+  }
+}
+
+:where(.positive) {
+  --badge-background: var(--color-positive-100);
+}
+
+:where(.negative) {
+  --badge-background: var(--color-negative-100);
+}
+
+.badge {
+  @include body-m;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--badge-padding-block) var(--badge-padding-inline);
+  border-radius: var(--radius-pill);
+  background-color: var(--badge-background);
+  color: var(--badge-color);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  @include mobile {
+    @include body-s;
+  }
+}

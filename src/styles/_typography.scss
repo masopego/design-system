@@ -1,0 +1,11 @@
+@mixin body-m {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-m);
+  line-height: var(--line-height-body);
+}
+
+@mixin body-s {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-s);
+  line-height: var(--line-height-body);
+}
